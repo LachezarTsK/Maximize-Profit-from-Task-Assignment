@@ -44,7 +44,7 @@ public class Solution
             int skill = task[0];
             int profit = task[1];
 
-            skillToProfits.TryAdd(skill, new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x)));
+            skillToProfits.TryAdd(skill, new PriorityQueue<int, int>(Comparer<int>.Create((xProfit, yProfit) => yProfit - xProfit)));
             skillToProfits[skill].Enqueue(profit, profit);
         }
 
