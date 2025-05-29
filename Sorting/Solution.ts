@@ -37,7 +37,6 @@ function calculateMaxProfit(workers: number[], skillToSortedProfits: Map<number,
     return maxProfit;
 }
 
-
 function createMapSkillToSortedProfits(tasks: number[][]): Map<number, TaskGroup> {
 
     const skillToSortedProfits = new Map();
