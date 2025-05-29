@@ -38,7 +38,7 @@ function createMapSkillToProfits(tasks: number[][]): Map<number, PriorityQueue<n
     const skillToProfits = new Map();
     for (let [skill, profit] of tasks) {
         if (!skillToProfits.has(skill)) {
-            skillToProfits.set(skill, new PriorityQueue<number>((xProfit, yProfit) => yProfit - x Profit));
+            skillToProfits.set(skill, new PriorityQueue<number>((xProfit, yProfit) => yProfit - xProfit));
         }
 
         skillToProfits.get(skill).enqueue(profit);
