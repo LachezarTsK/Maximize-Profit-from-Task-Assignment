@@ -6,11 +6,11 @@ public class Solution
 {
     public long MaxProfit(int[] workers, int[][] tasks)
     {
-        Dictionary<int, PriorityQueue<int, int>> skillToProfits = createMapSkillToProfits(tasks);
-        return calculateMaxProfit(workers, skillToProfits);
+        Dictionary<int, PriorityQueue<int, int>> skillToProfits = CreateMapSkillToProfits(tasks);
+        return CalculateMaxProfit(workers, skillToProfits);
     }
 
-    private long calculateMaxProfit(int[] workers, Dictionary<int, PriorityQueue<int, int>> skillToProfits)
+    private long CalculateMaxProfit(int[] workers, Dictionary<int, PriorityQueue<int, int>> skillToProfits)
     {
         long maxProfit = 0;
         foreach (int skill in workers)
@@ -36,7 +36,7 @@ public class Solution
         return maxProfit;
     }
 
-    private Dictionary<int, PriorityQueue<int, int>> createMapSkillToProfits(int[][] tasks)
+    private Dictionary<int, PriorityQueue<int, int>> CreateMapSkillToProfits(int[][] tasks)
     {
         Dictionary<int, PriorityQueue<int, int>> skillToProfits = [];
         foreach (int[] task in tasks)
